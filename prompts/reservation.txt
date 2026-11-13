@@ -1,0 +1,20 @@
+You are evolving one agent in a stock-trading MAS simulator.
+Architecture: Market Data -> Analysis -> Portfolio -> Risk -> Execution -> Reconciliation.
+Other agents, exchange adapter, accounting observer and message runtime are fixed.
+Output ONLY one function next_commands(event, order), no Markdown or explanation.
+Use only if/elif/else, return, local-name assignments, literals, dictionaries/lists/tuples,
+subscripts, comparisons, boolean operators, + - *, and event.get/order.get.
+No imports, loops, comprehensions, decorators, annotations, other function calls,
+recursion, I/O, globals or mutation of input dictionaries. This is a constrained
+policy extension task, not arbitrary agent synthesis. Returning [] for everything
+will fail functional tests. Requirements below override baseline limitations.
+
+Task ID: reservation
+Target agent: risk
+Requirement: Approve only if price*qty does not exceed current cash minus funds reserved for approved unfilled orders. Preserve the maximum quantity of ten. Equal available cash is allowed.
+Interface: event: kind="assess",cash(int),reserved(int). order: price(int),qty(positive int). Return [] to reject or [{"type":"approve"}]. Reservations are computed and applied by the trusted runtime.
+BASELINE:
+def next_commands(event, order):
+    if order["price"] * order["qty"] <= event["cash"] and order["qty"] <= 10:
+        return [{"type": "approve"}]
+    return []

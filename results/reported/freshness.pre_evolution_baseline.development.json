@@ -1,0 +1,1748 @@
+{
+  "passed": false,
+  "runs": 100,
+  "passed_runs": 80,
+  "failed_runs": 20,
+  "failures": [
+    {
+      "scenario": "stale",
+      "seed": 0,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 7,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 7,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 7
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 59,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 59,
+            "qty": 3,
+            "age": 7,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 1,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 20
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 43,
+            "qty": 4
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 43,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 2,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 8,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 8,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 8
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 38,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 38,
+            "qty": 2,
+            "age": 8,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 3,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 15,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 15,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 15
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 50,
+            "qty": 4
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 50,
+            "qty": 4,
+            "age": 15,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 4,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 8,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 8,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 8
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 50,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 50,
+            "qty": 3,
+            "age": 8,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 5,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 18,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 18,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 18
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 74,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 74,
+            "qty": 3,
+            "age": 18,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 6,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 20
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 85,
+            "qty": 4
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 85,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 7,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 13,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 13,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 13
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 55,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 55,
+            "qty": 2,
+            "age": 13,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 8,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 13,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 13,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 13
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 49,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 49,
+            "qty": 3,
+            "age": 13,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 9,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 12,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 12,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 12
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 64,
+            "qty": 4
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 64,
+            "qty": 4,
+            "age": 12,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 10,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 13,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 13,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 13
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 71,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 71,
+            "qty": 2,
+            "age": 13,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 11,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 20
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 63,
+            "qty": 4
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 63,
+            "qty": 4,
+            "age": 20,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 12,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 17,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 17,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 17
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 65,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 65,
+            "qty": 3,
+            "age": 17,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 13,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 17,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 17,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 17
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 51,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 51,
+            "qty": 3,
+            "age": 17,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 14,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 18,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 18,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 18
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 41,
+            "qty": 4
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 41,
+            "qty": 4,
+            "age": 18,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 15,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 15,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 15,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 15
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 48,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 48,
+            "qty": 2,
+            "age": 15,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 16,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 14,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 14,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 14
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 58,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 58,
+            "qty": 3,
+            "age": 14,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 17,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 19,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 19,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 19
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 68,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 68,
+            "qty": 3,
+            "age": 19,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 18,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 17,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 17,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 17
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 46,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 46,
+            "qty": 2,
+            "age": 17,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "stale",
+      "seed": 19,
+      "violations": [
+        "fresh_market_data",
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 19,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 19,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 19
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 78,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "freshness",
+          "event": {
+            "kind": "quote",
+            "price": 78,
+            "qty": 2,
+            "age": 19,
+            "signal": "buy"
+          },
+          "order": {},
+          "commands": [
+            {
+              "type": "forward"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

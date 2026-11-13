@@ -1,0 +1,24 @@
+You are evolving one agent in a stock-trading MAS simulator.
+Architecture: Market Data -> Analysis -> Portfolio -> Risk -> Execution -> Reconciliation.
+Other agents, exchange adapter, accounting observer and message runtime are fixed.
+Output ONLY a JSON object with the required policy keys; each value is a complete Python source string defining next_commands(event, order). No Markdown or explanation.
+Use only if/elif/else, return, local-name assignments, literals, dictionaries/lists/tuples,
+subscripts, comparisons, boolean operators, + - *, and event.get/order.get.
+No imports, loops, comprehensions, decorators, annotations, other function calls,
+recursion, I/O, globals or mutation of input dictionaries. This is a constrained
+policy extension task, not arbitrary agent synthesis. Returning [] for everything
+will fail functional tests. Requirements below override baseline limitations.
+
+Task ID: bundle_market_retry
+Edit all policies together. Required keys: freshness, retry
+Policy key: freshness; target agent: market
+Requirement: Forward quotes with age at most five ticks, reject older quotes, preserving ordinary fresh quote processing.
+Interface: event: kind="quote",age(nonnegative int),price(int),qty(int). order: {}. Return [] to reject or [{"type":"forward"}] to forward unchanged.
+Policy key: retry; target agent: execution
+Requirement: Add timeout retry. Preserve one exchange order per business order even if the exchange accepted the request but its acknowledgement was lost. Never submit unapproved, cancelled or filled orders.
+Interface: event: kind="submit" or "timeout". order: order_id(str),price(int),qty(int),approved(bool),status(str). Return [] or [{"type":"submit","client_order_id":str,"price":int,"qty":int}]. Exchange deduplicates client_order_id. Preserve approved order contents.
+BASELINE BUNDLE:
+{
+  "freshness": "def next_commands(event, order):\n    return [{\"type\": \"forward\"}]\n",
+  "retry": "def next_commands(event, order):\n    if event[\"kind\"] == \"submit\" and order[\"approved\"] and order[\"status\"] == \"approved\":\n        return [{\"type\": \"submit\", \"client_order_id\": order[\"order_id\"], \"price\": order[\"price\"], \"qty\": order[\"qty\"]}]\n    return []\n"
+}

@@ -1,0 +1,34 @@
+{
+  "original": {
+    "runs_per_variant": 690,
+    "frozen_failures": 0,
+    "detected_mutants": [
+      "reject_age_five",
+      "accept_age_six",
+      "ignore_reservations",
+      "reject_exact_budget",
+      "drop_timeout_retry",
+      "change_retry_identifier",
+      "ignore_late_fills",
+      "reapply_duplicate_fill",
+      "apply_order_quantity"
+    ]
+  },
+  "post_freeze": {
+    "runs_per_variant": 120,
+    "frozen_failures": 0,
+    "detected_mutants": [
+      "reject_age_five",
+      "accept_age_six",
+      "ignore_reservations",
+      "reject_exact_budget",
+      "drop_timeout_retry",
+      "change_retry_identifier",
+      "ignore_late_fills",
+      "reapply_duplicate_fill",
+      "apply_order_quantity"
+    ]
+  },
+  "post_freeze_only": [],
+  "original_only": []
+}

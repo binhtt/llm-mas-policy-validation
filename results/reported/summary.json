@@ -1,0 +1,17 @@
+{
+  "study_type": "developer_assisted_interactive_feasibility_run",
+  "candidate_artifacts": 9,
+  "authored_policies": 6,
+  "derived_bundles": 3,
+  "candidate_final_passed": 9,
+  "pre_evolution_baseline_final_passed": 0,
+  "candidate_scenario_runs": 4240,
+  "baseline_and_candidate_scenario_runs": 8480,
+  "candidate_failed_scenario_runs": 0,
+  "api_calls": 0,
+  "independent_llm_trials": 0,
+  "observed_repair_attempts": 0,
+  "python": "3.12.14",
+  "evaluation_seconds": 2.574301185999502,
+  "interpretation": "Feasibility evidence for these frozen artifacts only; evaluator-aware assistant authored the six policies and reused them in three bundles. Not independent LLM efficacy evidence."
+}

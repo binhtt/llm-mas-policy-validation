@@ -1,0 +1,6 @@
+{
+  "freshness": "def next_commands(event, order):\n    if event.get(\"age\", 6) > 5:\n        return []\n    return [{\"type\": \"forward\"}]\n",
+  "reservation": "def next_commands(event, order):\n    available = event[\"cash\"] - event[\"reserved\"]\n    cost = order[\"price\"] * order[\"qty\"]\n    if order[\"qty\"] > 10 or cost > available:\n        return []\n    return [{\"type\": \"approve\"}]\n",
+  "retry": "def next_commands(event, order):\n    if event[\"kind\"] not in (\"submit\", \"timeout\"):\n        return []\n    if not order[\"approved\"] or order[\"status\"] != \"approved\":\n        return []\n    return [{\"type\": \"submit\", \"client_order_id\": order[\"order_id\"],\n             \"price\": order[\"price\"], \"qty\": order[\"qty\"]}]\n",
+  "partial": "def next_commands(event, order):\n    if event[\"seen\"]:\n        return []\n    executed_quantity = event[\"qty\"]\n    return [{\"type\": \"apply_fill\", \"qty\": executed_quantity}]\n"
+}

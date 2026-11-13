@@ -1,0 +1,7408 @@
+{
+  "passed": false,
+  "runs": 180,
+  "passed_runs": 140,
+  "failed_runs": 40,
+  "failures": [
+    {
+      "scenario": "pending_cash",
+      "seed": 0,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 61,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 61,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 61,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 61,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 61,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 61,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 61,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 61,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 61,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 61,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 61,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 610
+          },
+          "order": {
+            "price": 61,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 61,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 61,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 1,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 87,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 87,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 87,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 87,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 87,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 870
+          },
+          "order": {
+            "price": 87,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 87,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 87,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 2,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 62,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 62,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 62,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 62,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 62,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 62,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 62,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 62,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 62,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 62,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 62,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 620
+          },
+          "order": {
+            "price": 62,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 62,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 62,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 3,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 77,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 77,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 77,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 77,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 77,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 77,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 77,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 77,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 77,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 77,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 77,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 770
+          },
+          "order": {
+            "price": 77,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 77,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 77,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 4,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 63,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 63,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 63,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 63,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 63,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 63,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 63,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 630
+          },
+          "order": {
+            "price": 63,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 63,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 63,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 5,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 83,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 83,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 83,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 83,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 83,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 83,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 83,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 83,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 83,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 83,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 83,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 830
+          },
+          "order": {
+            "price": 83,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 83,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 83,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 6,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 86,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 86,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 86,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 86,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 86,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 86,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 86,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 86,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 86,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 86,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 86,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 860
+          },
+          "order": {
+            "price": 86,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 86,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 86,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 7,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 72,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 72,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 72,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 72,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 72,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 72,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 72,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 72,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 72,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 72,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 72,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 720
+          },
+          "order": {
+            "price": 72,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 72,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 72,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 8,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 90,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 90,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 90,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 90,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 90,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 90,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 90,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 90,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 90,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 90,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 90,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 900
+          },
+          "order": {
+            "price": 90,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 90,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 90,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 9,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 71,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 71,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 71,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 71,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 71,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 71,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 71,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 710
+          },
+          "order": {
+            "price": 71,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 71,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 71,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 10,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 73,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 73,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 73,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 73,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 73,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 73,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 73,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 73,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 73,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 73,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 73,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 730
+          },
+          "order": {
+            "price": 73,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 73,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 73,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 11,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 87,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 87,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 87,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 87,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 87,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 87,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 870
+          },
+          "order": {
+            "price": 87,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 87,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 87,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 12,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 81,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 81,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 81,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 81,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 81,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 810
+          },
+          "order": {
+            "price": 81,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 81,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 81,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 13,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 81,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 81,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 81,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 81,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 81,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 810
+          },
+          "order": {
+            "price": 81,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 81,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 81,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 14,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 82,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 82,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 82,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 82,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 82,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 82,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 82,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 82,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 82,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 82,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 82,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 820
+          },
+          "order": {
+            "price": 82,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 82,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 82,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 15,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 76,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 76,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 76,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 76,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 76,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 76,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 76,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 76,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 76,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 76,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 76,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 760
+          },
+          "order": {
+            "price": 76,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 76,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 76,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 16,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 75,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 75,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 75,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 75,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 75,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 75,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 75,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 75,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 75,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 75,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 75,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 750
+          },
+          "order": {
+            "price": 75,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 75,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 75,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 17,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 85,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 85,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 85,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 85,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 85,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 850
+          },
+          "order": {
+            "price": 85,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 85,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 85,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 18,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 81,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 81,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 81,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 81,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 81,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 81,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 810
+          },
+          "order": {
+            "price": 81,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 81,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 81,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "pending_cash",
+      "seed": 19,
+      "violations": [
+        "cash_exposure",
+        "functional_order_count",
+        "nonnegative_cash"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 10,
+            "age": 0
+          }
+        },
+        {
+          "step": 8,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 9,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o2"
+          }
+        },
+        {
+          "step": 10,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 85,
+            "qty": 10
+          }
+        },
+        {
+          "step": 11,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-1",
+            "oid": "o2",
+            "price": 85,
+            "qty": 10
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 85,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 85,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 85,
+              "qty": 10
+            }
+          ]
+        },
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 850
+          },
+          "order": {
+            "price": 85,
+            "qty": 10
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 85,
+            "qty": 10,
+            "status": "approved",
+            "order_id": "o2",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o2",
+              "price": 85,
+              "qty": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 0,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 59,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 59,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 59,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 59,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 59,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 59,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 1,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 43,
+            "qty": 4
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 43,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 43,
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 43,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 43,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 43,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 2,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 38,
+            "qty": 2
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 38,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 38,
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 38,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 38,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 38,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 3,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 50,
+            "qty": 4
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 50,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 50,
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 50,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 50,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 50,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 4,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 50,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 50,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 50,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 50,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 50,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 50,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 5,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 74,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 74,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 74,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 74,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 74,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 74,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 6,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 85,
+            "qty": 4
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 85,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 85,
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 85,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 85,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 85,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 7,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 55,
+            "qty": 2
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 55,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 55,
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 55,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 55,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 55,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 8,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 49,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 49,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 49,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 49,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 49,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 49,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 9,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 64,
+            "qty": 4
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 64,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 64,
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 64,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 64,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 64,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 10,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 71,
+            "qty": 2
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 71,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 71,
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 71,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 71,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 71,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 11,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 63,
+            "qty": 4
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 63,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 63,
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 63,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 63,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 63,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 12,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 65,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 65,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 65,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 65,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 65,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 65,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 13,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 51,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 51,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 51,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 51,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 51,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 51,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 14,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 41,
+            "qty": 4
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 41,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 41,
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 41,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 41,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 41,
+            "qty": 4,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 15,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 48,
+            "qty": 2
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 48,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 48,
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 48,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 48,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 48,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 16,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 58,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 58,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 58,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 58,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 58,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 58,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 17,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 68,
+            "qty": 3
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 68,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 68,
+              "qty": 3
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 68,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 68,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 68,
+            "qty": 3,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 18,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 46,
+            "qty": 2
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 46,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 46,
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 46,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 46,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 46,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "retry_lost",
+      "seed": 19,
+      "violations": [
+        "functional_order_count"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 7,
+          "agent": "execution",
+          "kind": "timeout",
+          "data": {
+            "oid": "o1"
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "reservation",
+          "event": {
+            "kind": "assess",
+            "cash": 1000,
+            "reserved": 0
+          },
+          "order": {
+            "price": 78,
+            "qty": 2
+          },
+          "commands": [
+            {
+              "type": "approve"
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "submit"
+          },
+          "order": {
+            "price": 78,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": [
+            {
+              "type": "submit",
+              "client_order_id": "o1",
+              "price": 78,
+              "qty": 2
+            }
+          ]
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 78,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 78,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        },
+        {
+          "policy": "retry",
+          "event": {
+            "kind": "timeout"
+          },
+          "order": {
+            "price": 78,
+            "qty": 2,
+            "status": "approved",
+            "order_id": "o1",
+            "approved": true
+          },
+          "commands": []
+        }
+      ]
+    }
+  ]
+}

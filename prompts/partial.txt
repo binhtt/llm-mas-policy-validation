@@ -1,0 +1,20 @@
+You are evolving one agent in a stock-trading MAS simulator.
+Architecture: Market Data -> Analysis -> Portfolio -> Risk -> Execution -> Reconciliation.
+Other agents, exchange adapter, accounting observer and message runtime are fixed.
+Output ONLY one function next_commands(event, order), no Markdown or explanation.
+Use only if/elif/else, return, local-name assignments, literals, dictionaries/lists/tuples,
+subscripts, comparisons, boolean operators, + - *, and event.get/order.get.
+No imports, loops, comprehensions, decorators, annotations, other function calls,
+recursion, I/O, globals or mutation of input dictionaries. This is a constrained
+policy extension task, not arbitrary agent synthesis. Returning [] for everything
+will fail functional tests. Requirements below override baseline limitations.
+
+Task ID: partial
+Target agent: reconciliation
+Requirement: Support partial fills: apply only the quantity executed in this notification. Preserve execution-id deduplication and reconcile valid late notifications after cancellation.
+Interface: event: kind="fill",qty(positive int),price(int),seen(bool). order: qty(int total order size),filled(int already accounted),status(str). Return [] or [{"type":"apply_fill","qty":int}]. Runtime marks the notification seen after policy execution and applies price from the actual fill.
+BASELINE:
+def next_commands(event, order):
+    if not event["seen"]:
+        return [{"type": "apply_fill", "qty": order["qty"]}]
+    return []

@@ -1,0 +1,20 @@
+You are evolving one agent in a stock-trading MAS simulator.
+Architecture: Market Data -> Analysis -> Portfolio -> Risk -> Execution -> Reconciliation.
+Other agents, exchange adapter, accounting observer and message runtime are fixed.
+Output ONLY one function next_commands(event, order), no Markdown or explanation.
+Use only if/elif/else, return, local-name assignments, literals, dictionaries/lists/tuples,
+subscripts, comparisons, boolean operators, + - *, and event.get/order.get.
+No imports, loops, comprehensions, decorators, annotations, other function calls,
+recursion, I/O, globals or mutation of input dictionaries. This is a constrained
+policy extension task, not arbitrary agent synthesis. Returning [] for everything
+will fail functional tests. Requirements below override baseline limitations.
+
+Task ID: retry
+Target agent: execution
+Requirement: Add timeout retry. Preserve one exchange order per business order even if the exchange accepted the request but its acknowledgement was lost. Never submit unapproved, cancelled or filled orders.
+Interface: event: kind="submit" or "timeout". order: order_id(str),price(int),qty(int),approved(bool),status(str). Return [] or [{"type":"submit","client_order_id":str,"price":int,"qty":int}]. Exchange deduplicates client_order_id. Preserve approved order contents.
+BASELINE:
+def next_commands(event, order):
+    if event["kind"] == "submit" and order["approved"] and order["status"] == "approved":
+        return [{"type": "submit", "client_order_id": order["order_id"], "price": order["price"], "qty": order["qty"]}]
+    return []

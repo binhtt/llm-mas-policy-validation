@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "scenario_families": 4,
+  "seeds_per_family": 30,
+  "total_runs": 1200,
+  "frozen_runs": 120,
+  "frozen_failures": 0,
+  "mutants": 9,
+  "schema_detected_mutants": 0,
+  "behavior_detected_mutants": 9,
+  "mutant_failed_runs": 330
+}

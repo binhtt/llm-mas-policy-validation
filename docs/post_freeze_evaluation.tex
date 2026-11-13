@@ -1,0 +1,37 @@
+\subsection{Post-Freeze Integration Assessment}
+\label{sec:post-freeze-assessment}
+
+We evaluated the archived four-agent configuration on four scenario
+families written after its policies had been frozen. The bundle reuses
+the individual freshness, reservation, retry, and partial-fill policies
+verbatim. Its Reconciliation policy applies the reported fill quantity
+for each unseen notification, including valid notifications delivered
+after cancellation.
+
+The scenarios exercise retry before and after exchange acceptance,
+late partial fills with delayed duplicate delivery, the cash boundary
+under pending commitments, and the quote-age and order-quantity
+boundaries. Each family runs with 30 seeds that vary the input prices
+or quantities within its operation sequence. Scenario checkpoints
+specify expected exchange orders and ledger balances. We compare
+syntax and command-schema checks with the same checks augmented by
+behavioral monitors and scenario checkpoints, using identical executions
+for both conditions.
+
+The frozen configuration passed all 120 executions. Nine single-edit
+policy variants compiled and emitted schema-valid commands in all
+1,080 variant executions. The behavioral checks flagged 330 executions
+and detected all nine variants, with detection defined as at least one
+reported violation per variant. These results characterize the
+selected faults and scenarios in the FIFO simulator. The scenarios
+were written with access to the frozen policy source, and the variants
+were seeded manually.
+
+For comparison, we ran the same frozen configuration and nine variants
+on the 23 original extended scenario families with 30 seeds per family.
+The frozen configuration passed all 690 executions. The original suite
+flagged 1,290 of 6,210 variant executions and detected all nine variants.
+Both suites detected the same variants. The post-freeze suite provides
+additional evidence from different event sequences and explicit checkpoints.
+The suites used different numbers of scenario families and retained their
+own inputs and assertions.

@@ -1,0 +1,73 @@
+\section{Preliminary Feasibility Evaluation}
+\label{sec:preliminary}
+
+We conducted a developer-assisted feasibility evaluation using a simulated
+stock-trading multi-agent system. The system comprises market-data,
+analysis, portfolio, risk, execution, and reconciliation agents communicating
+through a FIFO message queue in a single process. Market inputs and exchange
+faults are synthetic; the experiment does not involve live trading.
+
+\paragraph{Artifacts and provenance.}
+A conversational coding assistant authored six restricted Python policies
+covering timeout retries, quote freshness, cash reservation, partial-fill
+accounting, execution-notification deduplication, and late-fill reconciliation.
+Three further configurations combined these policies to update two, two,
+and four agent policies simultaneously. These configurations reuse the
+single-policy artifacts and are not independent generations. The assistant
+had previously developed and inspected the evaluator, reference policies,
+and tests. Consequently, this experiment evaluates the feasibility of
+integrating these particular artifacts rather than independent LLM
+performance on unseen tasks. No separate API calls were used, and an exact
+backend model snapshot was unavailable.
+
+\paragraph{Procedure.}
+The candidate sources were frozen and hashed before execution. The tool
+checked their supported Python syntax and command schemas, then integrated
+them into the simulator. Development and final assessment suites covered
+ordinary operation, request loss, lost acknowledgements, pending-order cash
+contention, partial fills, duplicate notifications, cancellation, and
+interleaved operations. A combined recovery scenario exercised several
+updated policies within one transaction trace. Each scenario family was
+executed with twenty input seeds. These seeds represent test executions,
+not independent LLM generations. Although the suites have development and
+final roles in the tool, the final suite was not unseen by the assistant
+in this developer-assisted run.
+
+\begin{table}[t]
+\centering
+\caption{Observed acceptance of the frozen artifacts. Counts denote scenario
+executions, not independent generations.}
+\label{tab:preliminary-results}
+\begin{tabular}{lrr}
+\hline
+Configuration & Development & Final \\
+\hline
+Six individual policies, combined & 600/600 & 1800/1800 \\
+Market-data and execution bundle & 180/180 & 380/380 \\
+Risk and execution bundle & 180/180 & 380/380 \\
+Four-policy bundle & 260/260 & 460/460 \\
+\hline
+Total & 1220/1220 & 3020/3020 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Results.}
+All six individual policy artifacts and the three derived configurations
+passed their assessment suites, yielding 4,240 candidate scenario executions
+without observed violations. The corresponding pre-evolution baselines,
+which intentionally lacked the requested capabilities, were rejected by
+the final assessments. Including baseline executions, the experiment
+comprised 8,480 scenario executions. No repair attempts were observed because
+all submitted candidates passed on their first assessment. Thus, the results
+provide no empirical estimate of feedback-guided repair effectiveness or
+an advantage over independent resampling.
+
+\paragraph{Limitations.}
+The evaluator-aware generation process, small handcrafted policies,
+shared simulator, overlapping requirements, and reuse of policies across
+bundles limit the conclusions. Passing the selected executions is not a
+formal correctness proof. The study does not establish generalization,
+distributed-system correctness, profitability, or a population-level LLM
+success rate. Independent generation sessions, additional systems, and
+budget-controlled repair comparisons are required for stronger claims.

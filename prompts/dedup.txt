@@ -1,0 +1,18 @@
+You are evolving one agent in a stock-trading MAS simulator.
+Architecture: Market Data -> Analysis -> Portfolio -> Risk -> Execution -> Reconciliation.
+Other agents, exchange adapter, accounting observer and message runtime are fixed.
+Output ONLY one function next_commands(event, order), no Markdown or explanation.
+Use only if/elif/else, return, local-name assignments, literals, dictionaries/lists/tuples,
+subscripts, comparisons, boolean operators, + - *, and event.get/order.get.
+No imports, loops, comprehensions, decorators, annotations, other function calls,
+recursion, I/O, globals or mutation of input dictionaries. This is a constrained
+policy extension task, not arbitrary agent synthesis. Returning [] for everything
+will fail functional tests. Requirements below override baseline limitations.
+
+Task ID: dedup
+Target agent: reconciliation
+Requirement: Ignore execution notifications already processed, while continuing to process distinct fills, including partial fills and valid late notifications after cancellation.
+Interface: event: kind="fill",qty(positive int),price(int),seen(bool). order: qty(int total),filled(int already accounted),status(str). Return [] or [{"type":"apply_fill","qty":int}]. The trusted runtime maintains seen identifiers and applies notification price.
+BASELINE:
+def next_commands(event, order):
+    return [{"type": "apply_fill", "qty": event["qty"]}]

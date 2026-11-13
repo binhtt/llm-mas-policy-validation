@@ -1,0 +1,2388 @@
+{
+  "passed": false,
+  "runs": 100,
+  "passed_runs": 80,
+  "failed_runs": 20,
+  "failures": [
+    {
+      "scenario": "late",
+      "seed": 0,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 59,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 59,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 59,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 59,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 59,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 1,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 43,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 43,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 43,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 43,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 3,
+            "price": 43,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 2,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 38,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 38,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 38,
+            "qty": 1
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 38,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 38,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 3,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 50,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 50,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 50,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 50,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 3,
+            "price": 50,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 4,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 50,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 50,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 50,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 50,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 50,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 5,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 74,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 74,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 74,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 74,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 74,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 6,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 85,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 85,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 85,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 85,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 3,
+            "price": 85,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 7,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 55,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 55,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 55,
+            "qty": 1
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 55,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 55,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 8,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 49,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 49,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 49,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 49,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 49,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 9,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 64,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 64,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 64,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 64,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 3,
+            "price": 64,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 10,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 71,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 71,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 71,
+            "qty": 1
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 71,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 71,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 11,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 63,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 63,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 63,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 63,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 3,
+            "price": 63,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 12,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 65,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 65,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 65,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 65,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 65,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 13,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 51,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 51,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 51,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 51,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 51,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 14,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 41,
+            "qty": 4,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 41,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 41,
+            "qty": 3
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 41,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 3,
+            "price": 41,
+            "seen": false
+          },
+          "order": {
+            "qty": 4,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 15,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 48,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 48,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 48,
+            "qty": 1
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 48,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 48,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 16,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 58,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 58,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 58,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 58,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 58,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 17,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 68,
+            "qty": 3,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 68,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 68,
+            "qty": 2
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 68,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 2,
+            "price": 68,
+            "seen": false
+          },
+          "order": {
+            "qty": 3,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 18,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 46,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 46,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 46,
+            "qty": 1
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 46,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 46,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    },
+    {
+      "scenario": "late",
+      "seed": 19,
+      "violations": [
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "agent": "market",
+          "kind": "quote",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 1,
+          "agent": "analysis",
+          "kind": "quote",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 0,
+            "signal": "buy"
+          }
+        },
+        {
+          "step": 2,
+          "agent": "portfolio",
+          "kind": "propose",
+          "data": {
+            "price": 78,
+            "qty": 2,
+            "age": 0
+          }
+        },
+        {
+          "step": 3,
+          "agent": "risk",
+          "kind": "assess",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 4,
+          "agent": "execution",
+          "kind": "submit",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 5,
+          "agent": "execution",
+          "kind": "cancel",
+          "data": {
+            "oid": "o1"
+          }
+        },
+        {
+          "step": 6,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "late",
+            "oid": "o1",
+            "price": 78,
+            "qty": 1
+          }
+        },
+        {
+          "step": 7,
+          "agent": "reconciliation",
+          "kind": "fill",
+          "data": {
+            "fid": "end-0",
+            "oid": "o1",
+            "price": 78,
+            "qty": 1
+          }
+        }
+      ],
+      "policy_calls": [
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 78,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        },
+        {
+          "policy": "late_fill",
+          "event": {
+            "kind": "fill",
+            "qty": 1,
+            "price": 78,
+            "seen": false
+          },
+          "order": {
+            "qty": 2,
+            "filled": 0,
+            "status": "cancelled"
+          },
+          "commands": []
+        }
+      ]
+    }
+  ]
+}

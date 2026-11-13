@@ -1,0 +1,4 @@
+{
+  "freshness": "def next_commands(event, order):\n    if event.get(\"age\", 6) > 5:\n        return []\n    return [{\"type\": \"forward\"}]\n",
+  "retry": "def next_commands(event, order):\n    if event[\"kind\"] not in (\"submit\", \"timeout\"):\n        return []\n    if not order[\"approved\"] or order[\"status\"] != \"approved\":\n        return []\n    return [{\"type\": \"submit\", \"client_order_id\": order[\"order_id\"],\n             \"price\": order[\"price\"], \"qty\": order[\"qty\"]}]\n"
+}
