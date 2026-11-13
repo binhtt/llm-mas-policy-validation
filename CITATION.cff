@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this artifact with its developer-assisted feasibility limitations."
+title: "Assessing LLM-Generated Updates in Multi-Agent Systems: A Stock-Trading Case Study"
+type: software
+authors:
+  - family-names: Trinh
+    given-names: Thanh-Binh
+version: 0.1.0
+license: MIT
+abstract: "Frozen policies, simulator and execution evidence; not an independent LLM generation or repair benchmark."
