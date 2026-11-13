@@ -1,0 +1,30 @@
+{
+  "study_type": "developer_assisted_interactive_feasibility_run",
+  "generation_channel": "ChatGPT/Codex assistant, current conversation, candidates written in an assistant tool call",
+  "exact_backend_model_id": "not exposed by the execution environment",
+  "api_requests": 0,
+  "independent_sampling_trials": 0,
+  "authored_single_policy_artifacts": 6,
+  "derived_bundle_artifacts": 3,
+  "bundle_construction": "reuse the six policies authored in the same batch; not separate model samples",
+  "generation_context": "The assistant previously designed/read the evaluator, reference policies and tests in this conversation.",
+  "task_prompt_files": "Archived task descriptions, NOT complete independent API requests or the entire generation context.",
+  "candidate_freeze": "Before this batch is evaluated. No deliberate fault injection into these candidates.",
+  "prohibited_claims": [
+    "Independent or blind LLM benchmark",
+    "Nine independent LLM generations",
+    "LLM repair success",
+    "Effectiveness versus resampling or feedback",
+    "Generalization to unknown tests",
+    "Formal correctness or profitability"
+  ],
+  "source_hashes": {
+    "evaluator.py": "c816235606aa5b29c29dd0c4ce0eb4b2757f83667e15c0704098be7ff8d0f65e",
+    "analysis.py": "84524c49fd5cad06ed5e1fcfd7a1b1ce5a6c4a0c3d7619ad7730265f1619d7c4",
+    "policy_runtime.py": "4f3d7f7d44656a3aeb8fdbcb070cede35f30da0fe304ca42f7a35f5be20f4561",
+    "catalog.py": "5aa5a92e4ee85cb421bd3846f6e14ee516556a57524848f8e733555996970ce0",
+    "test_local.py": "b429e2d440967a21a4b08d26668bd46f78aeb697b3222ef1f4430d3a50c8d53e",
+    "system.py": "ee157b4dc106c215850af079a56d50ea5389059dd4003e0e60c6babf018057a7",
+    "study.py": "b1f4539bd550c30640fd80a3f4c3fc9e717b305e7d3629150ba6a96ba69559b5"
+  }
+}
